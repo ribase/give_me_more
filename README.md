@@ -7,3 +7,5 @@ possible with this simple mod! - Your treasury hates this trick! -
 
 Are you tired of a century of nothing in ET as Meso-/South-/Northamerican?
 Try the new included idea, money burn is guaranteed.
+
+Build some monumental buildings in your country and pass over all proposals to show domination to the masses. By agree with the terms and conditions, your country will slide into corruption and you have to scapegoat one of your advisors.
