@@ -3,5 +3,5 @@ archive="mod/more_decisions"
 tags={
 	"events"
 }
-picture="NoMoreHRE.png"
+picture="Ducati.png"
 supported_version="1.25.*.*"
