@@ -7,6 +7,7 @@ country_decisions = {
 			NOT {
 				is_at_war = yes	
 			}
+			primitives = no
 		}  
 	
 		allow = {  
@@ -30,6 +31,33 @@ country_decisions = {
 			factor = 0  
 		}  
 	}
+
+	buy_in_military_knowledge = {#name of the decision, used for localisation  
+		major = yes  #major= green, else blue
+
+		potential = {  
+			NOT {
+				is_at_war = yes	
+			}
+		}  
+	
+		allow = {  
+			treasury = 6000
+			NOT {
+				is_at_war = yes	
+			}
+		}  
+	
+		effect = {  
+			add_army_tradition = 30
+			add_treasury = -6000
+		}  
+		ai_will_do = {  
+			#0 means they won't take it
+			factor = 0  
+		}  
+	}
+
 
 	advance_country_with_gold {
 		major = yes  #major= green, else blue

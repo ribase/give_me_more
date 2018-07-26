@@ -1,7 +1,9 @@
 name="Give me more"
 path="mod/more_decisions"
 tags={
-	"events"
+	"Alternative History"
+	"Missions And Decisions"
+	"National Ideas"
 }
-picture="NoMoreHRE.png"
+picture="image.jpg"
 supported_version="1.25.*.*"

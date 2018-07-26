@@ -15,33 +15,31 @@ early_colonize_ideas = {
 		colonists = 1
 	}
 
-	slavery_colonize = {
-		diplomatic_upkeep = 1
+	colonize_the_neighbour = {
 		colonists = 1
 	}
 
-	decentralization_colonize = {
+	bigger_better_reputation = {
 		diplomatic_reputation = 2
 	}
 
-	advisors_colonize = {
+	new_is_always_better = {
 		global_colonial_growth = 35
 	}
 
-	resistance_to_foreigners_colonize = {
-		global_autonomy = -0.10
+	raise_diplomatic_upkeep = {
+		diplomatic_upkeep = 1
 	}
 
-	efficient_administration_colonize = {
+	cheaper_core_creation = {
 		core_creation = -0.10
 	}
 
-	administrative_innovation_colonize = {
+	more_army_less_costs = {
 		land_maintenance_modifier = -0.10
 	}
 
-	noble_soldiers_colonize = {
-		diplomatic_upkeep = 1
+	colonize_the_neighbour_even_more = {
 		colonists = 1
 	}
 	
