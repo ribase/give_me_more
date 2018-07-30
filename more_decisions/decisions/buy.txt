@@ -160,6 +160,7 @@ country_decisions = {
 				is_at_war = yes
 			}
 		    manpower = 10
+		    treasury = 100
 		}
 
 		effect = {
@@ -167,8 +168,8 @@ country_decisions = {
                 add_unit_construction = {
                     type = infantry
                     amount = 10
-                    speed = 1
-                    cost = 0.1
+                    speed = 0.1
+                    cost = 1
                 }
             }
 		}
@@ -193,6 +194,7 @@ country_decisions = {
 				is_at_war = yes
 			}
 		    manpower = 20
+		    treasury = 200
 		}
 
 		effect = {
@@ -200,8 +202,8 @@ country_decisions = {
                 add_unit_construction = {
                     type = infantry
                     amount = 20
-                    speed = 1
-                    cost = 0.05
+                    speed = 0.05
+                    cost = 1
                 }
             }
 		}
@@ -211,6 +213,74 @@ country_decisions = {
 		}
 
 	}
+
+    buy_army_more_convenient_30 {
+        major = yes  #major= green, else blue
+
+        potential = {
+            NOT {
+                is_at_war = yes
+            }
+        }
+
+        allow = {
+            NOT {
+                is_at_war = yes
+            }
+            manpower = 30
+		    treasury = 300
+        }
+
+        effect = {
+            random_owned_province {
+                add_unit_construction = {
+                    type = infantry
+                    amount = 30
+                    speed = 0.025
+                    cost = 1
+                }
+            }
+        }
+        ai_will_do = {
+            #0 means they won't take it
+            factor = 0
+        }
+
+    }
+
+    buy_army_more_convenient_40 {
+        major = yes  #major= green, else blue
+
+        potential = {
+            NOT {
+                is_at_war = yes
+            }
+        }
+
+        allow = {
+            NOT {
+                is_at_war = yes
+            }
+            manpower = 40
+		    treasury = 400
+        }
+
+        effect = {
+            random_owned_province {
+                add_unit_construction = {
+                    type = infantry
+                    amount = 40
+                    speed = 0.0125
+                    cost = 1
+                }
+            }
+        }
+        ai_will_do = {
+            #0 means they won't take it
+            factor = 0
+        }
+
+    }
 
 	spend_into_my_country {
 		major = yes  #major= green, else blue
@@ -222,40 +292,72 @@ country_decisions = {
 		}  
 	
 		allow = {
-			NOT {
-				is_at_war = yes	
-			}
-		}  
-		effect = {
-			if = {
-			    limit = {
-				    development = 0
+            if = {
+                limit = {
+                    total_development = 0
                 }
-				add_treasury = -6000
+                treasury = 5000
             }
-            else_if {
-			    limit = {
-				    development = 50
+            if = {
+                limit = {
+                    total_development = 100
                 }
-				add_treasury = -12000
+                treasury = 10000
             }
-            else_if {
-			    limit = {
-				    development = 100
+            if = {
+                limit = {
+                    total_development = 200
                 }
-				add_treasury = -24000
+                treasury = 20000
             }
-            else_if {
-			    limit = {
-				    development = 150
+            if = {
+                limit = {
+                    total_development = 400
                 }
-				add_treasury = -48000
+                treasury = 40000
             }
-            else_if {
-			    limit = {
-				    development = 200
+            if = {
+                limit = {
+                    total_development = 800
                 }
-				add_treasury = -96000
+                treasury = 80000
+            }
+            NOT {
+                is_at_war = yes
+            }
+        }
+        effect = {
+            if = {
+                limit = {
+                    total_development = 0
+
+                }
+                add_treasury = -5000
+            }
+            if = {
+                limit = {
+                    total_development = 100
+
+                }
+                add_treasury = -10000
+            }
+            if = {
+                limit = {
+                    total_development = 200
+                }
+                add_treasury = -20000
+            }
+            if = {
+                limit = {
+                    total_development = 400
+                }
+                add_treasury = -40000
+            }
+            if = {
+                limit = {
+                    total_development = 800
+                }
+                add_treasury = -80000
             }
 			every_owned_province = { 
 				add_base_tax = 1
