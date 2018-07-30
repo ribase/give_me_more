@@ -1,0 +1,13 @@
+type = infantry
+unit_type = western
+
+maneuver = 2
+offensive_morale = 9
+defensive_morale = 8
+offensive_fire = 5
+defensive_fire = 5
+offensive_shock = 9
+defensive_shock = 9
+
+unitsize = 1                   # Optional. Overrides the standard regiment size (1000), making regiments smaller or bigger with this unit.
+manpower = 3                 # Optional. Overrides the manpower cost for this unit. 1 equals 1000 men.

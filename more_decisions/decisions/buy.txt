@@ -146,6 +146,72 @@ country_decisions = {
 			
 	}
 
+	buy_army_more_convenient_10 {
+		major = yes  #major= green, else blue
+
+		potential = {
+			NOT {
+				is_at_war = yes
+			}
+		}
+
+		allow = {
+			NOT {
+				is_at_war = yes
+			}
+		    manpower = 10
+		}
+
+		effect = {
+            random_owned_province {
+                add_unit_construction = {
+                    type = infantry
+                    amount = 10
+                    speed = 1
+                    cost = 0.1
+                }
+            }
+		}
+		ai_will_do = {
+			#0 means they won't take it
+			factor = 0
+		}
+
+	}
+
+    buy_army_more_convenient_20 {
+		major = yes  #major= green, else blue
+
+		potential = {
+			NOT {
+				is_at_war = yes
+			}
+		}
+
+		allow = {
+			NOT {
+				is_at_war = yes
+			}
+		    manpower = 20
+		}
+
+		effect = {
+            random_owned_province {
+                add_unit_construction = {
+                    type = infantry
+                    amount = 20
+                    speed = 1
+                    cost = 0.05
+                }
+            }
+		}
+		ai_will_do = {
+			#0 means they won't take it
+			factor = 0
+		}
+
+	}
+
 	spend_into_my_country {
 		major = yes  #major= green, else blue
 
